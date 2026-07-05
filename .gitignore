@@ -1,0 +1,15 @@
+# Java
+HealthAi/target/
+HealthAi/BOOT-INF/
+*.class
+*.jar
+
+# Python
+healthai-ai-service/venv/
+healthai-ai-service/__pycache__/
+healthai-ai-service/*.pyc
+healthai-ai-service/chroma_db/
+healthai-ai-service/.env
+
+# Environment
+.env
