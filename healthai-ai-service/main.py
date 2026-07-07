@@ -20,6 +20,13 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # ← Yeh hona chahiye
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
 app.include_router(rec_router)
 app.include_router(chat_router)
 

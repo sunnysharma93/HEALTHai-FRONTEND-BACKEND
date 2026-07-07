@@ -1,19 +1,19 @@
-
 import axios from 'axios';
 
+// Yahan humne direct URLs hardcode kar diye hain taaki Docker compile ke waqt fallback ka koi lafda na rahe
 const JAVA_API = 'http://localhost:8081';
 const AI_API = 'http://localhost:8085';
 
 // Axios instance — Java Backend
 const javaApi = axios.create({
   baseURL: JAVA_API,
-  headers: { 'Content-Type': 'application/json' }
+  headers: { 'Content-Type': 'application/json' } // <--- withCredentials: true hata diya h yahan se
 });
 
 // Axios instance — AI Service
 const aiApi = axios.create({
   baseURL: AI_API,
-  headers: { 'Content-Type': 'application/json' }
+  headers: { 'Content-Type': 'application/json' } // <--- withCredentials: true hata diya h yahan se
 });
 
 // Token interceptor — har request mein token add karo

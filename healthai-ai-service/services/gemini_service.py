@@ -13,7 +13,7 @@ class GeminiService:
     def generate(self, prompt: str) -> str:
         try:
             response = self.client.models.generate_content(
-                model='gemini-2.0-flash',
+                model='gemini-1.5-flash',
                 contents=prompt
             )
             return response.text
@@ -24,7 +24,7 @@ class GeminiService:
     def chat(self, message: str) -> str:
         try:
             response = self.client.models.generate_content(
-                model='gemini-2.0-flash',
+                model='gemini-1.5-flash',
                 contents=message
             )
             return response.text
